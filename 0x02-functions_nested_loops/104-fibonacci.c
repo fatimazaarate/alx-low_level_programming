@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
  * main - Prints the first 98 Fibonacci numbers
  * Return: (Success).
  */
+
 int main(void)
 {
 	unsigned long int i;
