@@ -14,3 +14,4 @@ C - Structures, typedef
 C - Function pointers
 C - Variadic functions
 C - prinf
+etc...
