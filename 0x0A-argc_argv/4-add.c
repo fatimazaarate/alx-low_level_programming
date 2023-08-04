@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - Print the result, followed by a new line.
@@ -11,20 +12,27 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 0, sum = 0;
+	int i = 1, sum = 0;
 
 	if (argc == 1)
 	{
 		printf("%d\n", 0);
 	}
-	i = 1;
-	if (atoi(argv[i]) > 0)
+	while (i < argc)
 	{
-		for (; i < argc; i++)
-		{
+	if (strspn(argv[i], "0123456789") != strlen(argv[i]))
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
+	{
 		sum += atoi(argv[i]);
-		}
-	printf("%d\n", sum);
+		i++;
+	}
+	if(sum != 0)
+		printf("%d\n", sum);
 	}
 	return (0);
 }
+
