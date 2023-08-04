@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("%d\n", 0);
+		printf("0\n");
 	}
 	while (i < argc)
 	{
@@ -26,13 +26,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	else
-	{
 		sum += atoi(argv[i]);
-		i++;
+	i++;
 	}
 	if(sum != 0)
 		printf("%d\n", sum);
-	}
+	
 	return (0);
 }
-
