@@ -12,18 +12,21 @@ void print_all(const char * const format, ...)
 	va_list args;
 	va_start(args, format);
 
-	while( format[index] != '\0')
+	while(format[index] != '\0')
 	{
-		switch (format[index])
+		if (index != 0)
+			printf(", ");
+
+		switch(format[index])
 		{
 			case 'c' : 
-				printf("%c", va_arg(args, char));
+				printf("%c", va_arg(args, int));
 				break;
 			case 'i' :
 				printf("%d", va_arg(args, int));
 				break;
 			case 'f' :
-				printf("%f", va_arg(args, float));
+				printf("%f", va_arg(args, double));
 				break;
 			case 's' :
 				{
@@ -36,10 +39,10 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
-		format++;
+		index++;
 	}
-	va_end(args);
 
 	printf("\n");
+	va_end(args);
 }
 
