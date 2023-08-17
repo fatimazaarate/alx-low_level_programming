@@ -1,8 +1,9 @@
 #include "variadic_functions.h"
 
 /**
-*
-*/
+ * print_all - print everything
+ * @format: list of types
+ */
 
 void print_all(const char * const format, ...)
 {
@@ -10,25 +11,27 @@ void print_all(const char * const format, ...)
 	char *s;
 
 	va_list args;
+
 	va_start(args, format);
 
-	while(format[index] != '\0')
+	while (format[index] != '\0')
 	{
-		if (index != 0)
+		if ((format[index] == 'c' || format[index] == 'i' ||
+		format[index] == 'f' || format[index] == 's') && index != 0)
 			printf(", ");
 
-		switch(format[index])
+		switch (format[index])
 		{
-			case 'c' : 
+			case 'c':
 				printf("%c", va_arg(args, int));
 				break;
-			case 'i' :
+			case 'i':
 				printf("%d", va_arg(args, int));
 				break;
-			case 'f' :
+			case 'f':
 				printf("%f", va_arg(args, double));
 				break;
-			case 's' :
+			case 's':
 				{
 				s = va_arg(args, char *);
 				if (s == NULL)
