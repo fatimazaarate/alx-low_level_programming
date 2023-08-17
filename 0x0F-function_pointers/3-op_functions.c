@@ -1,57 +1,54 @@
 #include "3-calc.h"
-
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
 /**
- * op_add - adds tow numbers
+ * op_add - the remainder of the division of a by b
  * @a: first number
- * @b: second number
- *
- * Return: Always success(0)
+ * @b: sec number
+ * Return: the Result
  */
 int op_add(int a, int b)
+{
 	return (a + b);
-
+}
 /**
- * op_sub - substitution of tow numbers
+ * op_sub - the remainder of the division of a by b
  * @a: first number
- * @b: second number
- *
- * Return: Always success(0)
+ * @b: sec number
+ * Return: the Result
  */
 int op_sub(int a, int b)
+{
 	return (a - b);
-
+}
 /**
- * op_mul - multiplies tow numbers
+ * op_mul - the remainder of the division of a by b
  * @a: first number
- * @b: second number
- *
- * Return: Always success(0)
+ * @b: sec number
+ * Return: the Result
  */
 int op_mul(int a, int b)
+{
 	return (a * b);
-
+}
 /**
- * op_div - divides tow numbers
+ * op_div - the remainder of the division of a by b
  * @a: first number
- * @b: second number
- *
- * Return: Always success(0)
+ * @b: sec number
+ * Return: the Result
  */
 int op_div(int a, int b)
+{
 	return (a / b);
-
+}
 /**
- * op_mod - the remainder of the division
+ * op_mod - the remainder of the division of a by b
  * @a: first number
- * @b: second number
- *
- * Return: Always success(0)
+ * @b: sec number
+ * Return: the Result
  */
 int op_mod(int a, int b)
+{
 	return (a % b);
+}
