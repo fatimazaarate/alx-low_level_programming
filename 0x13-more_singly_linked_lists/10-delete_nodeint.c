@@ -7,7 +7,7 @@
 * Return: value of delted node
 */
 
-int delete_nodeint_at_index(listint_t**head,unsigned int index)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *t = *head;
 	listint_t *prev = NULL;
@@ -22,7 +22,7 @@ int delete_nodeint_at_index(listint_t**head,unsigned int index)
 		free(t);
 		return (1);
 	}
-	while (t != NULL&&count<index)
+	while (t != NULL && count < index)
 	{
 		prev = t;
 		t = t->next;
