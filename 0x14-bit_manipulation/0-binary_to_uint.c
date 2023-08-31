@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+* _power - pow of x and y
+* @x: first num
+* @y: second num
+* Return: integer
+*/
+
 int _power(int x, int y)
 {
 	if (y < 0)
@@ -8,6 +15,14 @@ int _power(int x, int y)
 		return (1);
 	return (x * _power(x, y - 1));
 }
+
+/**
+* binary_to_uint - converts a binary number to an unsigned int
+* @b: pointing to a string of 0 and 1 chars
+*
+* Return: the converted number
+*/
+
 unsigned int binary_to_uint(const char *b)
 {
 	int i, j, len, n;
