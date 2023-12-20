@@ -1,10 +1,10 @@
-CC: gcc
-CFLAGS: -Wall
-SRC: $(wildcard *.c)
+CC = gcc
+CFLAGS = -Wall
+SRC = *.c
 
 all: school
 
-school: $(SRC)
+school:
 	$(CC) $(CFLAGS) $(SRC) -o school
 
 clean:
